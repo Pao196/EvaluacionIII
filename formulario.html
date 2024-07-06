@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora de Calorías Quemadas</title>
+</head>
+<body class="container">
+
+    <div class="row">
+        <div class="col"><h2 class="my-2">Calculadora de Calorías Quemadas</h2></div>
+    </div>
+
+    <form id="cal-formulario" onsubmit="procesarFormulario(event)">
+        <div class="row">
+            <div class="col-12">
+                <h5 class="alert-heading">Instrucciones</h5>
+                <div class="alert alert-secondary" role="alert">
+                    <p>Realice el cálculo de calorías quemadas en el ejercicio a través de este formulario</p>
+                    <p>Ingrese su peso y tiempo de ejercicio:</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="weight" class="form-label">Peso (Kg)</label>
+                                <input type="number" class="form-control" id="weight" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="mb-3">
+                                <label for="minutes" class="form-label">Minutos</label>
+                                <input type="number" class="form-control" id="minutes" required>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Seleccione la actividad:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="actividad" id="caminar" value="caminar" checked>
+                        <label class="form-check-label" for="caminar">
+                            Caminar
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="actividad" id="correr" value="correr">
+                        <label class="form-check-label" for="correr">
+                            Correr
+                        </label>
+                    </div>
+                    <p>Presione el botón "Calcular" para obtener el resultado.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-3">
+            <div class="col">
+                <button class="btn btn-primary" type="submit">Calcular</button>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="alert alert-primary" id="resultado" role="alert">
+                Esperando resultado...
+            </div>
+        </div>
+    </form>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fr.js"></script>
+</body>
+</html>
