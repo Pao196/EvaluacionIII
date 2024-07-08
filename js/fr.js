@@ -1,7 +1,7 @@
 function procesarFormulario(evento) {
     evento.preventDefault() 
-    const peso = document.getElementById('weight').value
-    const minutos = document.getElementById('minutes').value
+    const peso = document.getElementById('peso').value
+    const minutos = document.getElementById('minutos').value
     const caminar = document.getElementById('caminar').checked
     const correr = document.getElementById('correr').checked
     const resultado = document.getElementById('resultado')
